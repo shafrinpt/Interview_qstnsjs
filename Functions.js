@@ -94,6 +94,7 @@ var x = 10;
   const add = (firstNum , secondNum) => {
     return firstNum + secondNum;
   }
+  
   //Arrow function vs Regular function?
   //1.syntax
 
