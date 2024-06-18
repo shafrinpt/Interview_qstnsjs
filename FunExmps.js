@@ -27,7 +27,7 @@ console.log(sqareOfNums(5));
 const addVal = num => num + num;
 console.log(addVal(3));
 
-//example 5
+//example 6
 
 const valSquare = (a,b) => a *b;
 const sum = valSquare(7,9);
@@ -70,6 +70,16 @@ console.log(divNum(200,2));
  });
  console.log(NewArr);
  
+ //example 10
+
+ let arr1 = [1,2,3,4,5];
+let nweArr = function(arr){
+    const addValues = arr.map((num,i,arr)=>{
+        return num + 2;
+    });
+    return addValues;
+}
+console.log(nweArr(arr));
 
  
 
