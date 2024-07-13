@@ -92,3 +92,115 @@ function removeDuplicates(arr) {
 console.log(removeDuplicates(numbers)); 
 
 
+
+//1.find longest word in array
+
+const word = ["apple","banana","chery","dates","blackberry"];
+
+
+function findLongestWord(arr){
+    let longest = arr[0];
+    for(let i = 0 ; i< arr.length;i++){
+        if(arr[i].length > longest.length){
+            longest = arr[i];
+        }
+    }
+    return longest;
+}
+
+console.log(findLongestWord(word));
+
+
+//2.find shortest word in array?
+
+const vehicles = ["cars","cycle","bus","bike","scooter"];
+function findShortWord(arr){
+    let shortest = arr[0];
+    for(let i = 0;i<arr.length;i++){
+        if(arr[i].length<shortest.length){
+            shortest = arr[i];
+        }
+    }
+    return shortest;
+}
+console.log(findShortWord(vehicles));
+
+//3.calculate the total length of all words in an array?
+
+const vegitables = ["tomato","potato","ginger","onion","chilli","brigal"];
+
+function totalLength(arr){
+    let total = 0;
+    for(let i=0;i<arr.length;i++){
+        total += arr[i].length;
+    }
+    return total;
+}
+console.log(totalLength(vegitables));
+
+//4.reverse an array of words?
+
+const colors = ["red","blue","black","white","yellow"];
+function reverseArray(arr){
+    for(let i = 0 ; i<arr.length/2;i++){
+        let temp = arr[i];
+        arr[i] = arr[arr.length - 1- i];
+        arr[arr.length-1-i] = temp;
+
+    }
+    return arr;
+}
+console.log(reverseArray(colors));
+
+//5.concatenate all words in an array into a single string?
+
+const fruits = ["apple","banana","kiwi","berry","pappaya"];
+function singleString(arr){
+    let concate = [] ;
+    for(let i = 0;i<arr.length;i++){
+        concate += arr[i];
+    }
+    return concate;
+}
+
+console.log(singleString(fruits));
+
+//6.create an array of the length of each words?
+
+const items = [ "comb","bag","ac","almira","pillows"];
+
+function wordsLength(arr){
+    let length = [];
+    for(let i = 0;i<arr.length;i++){
+        length.push(arr[i].length);
+    }
+    return length;
+}
+console.log(wordsLength(items));
+
+//7.capitalise the first letter of each words?
+
+const words = ["apple", "banana", "cherry"];
+function capitalizeWords(arr) {
+    let result = [];
+    for (let i = 0; i < arr.length; i++) {
+        let word = arr[i];
+        result.push(word.charAt(0).toUpperCase() + word.slice(1));
+    }
+    return result;
+}
+
+console.log(capitalizeWords(words));
+
+//8.create new array with words is uppercase?
+
+const values = ["mango","apple","pinapple","mangostine"];
+
+function newUppercase(arr){
+    let result = [];
+    for(let i =0;i<arr.length;i++){
+        result.push(arr[i].toUpperCase());
+    }
+    return result;
+}
+console.log(newUppercase(values));
