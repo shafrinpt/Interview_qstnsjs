@@ -204,3 +204,18 @@ function newUppercase(arr){
     return result;
 }
 console.log(newUppercase(values));
+
+//9. writen 5words items in array
+
+const names = ["arya","mehza","ziba","fathima","shafrin","hyzin"];
+
+function wordLength(arr){
+    let result = [];
+    for(let i = 0;i<arr.length;i++){
+        if(arr[i].length<=5){
+            result.push(arr[i]);
+        }
+    }
+    return result;
+}
+console.log(wordLength(names));

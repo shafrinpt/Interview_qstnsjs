@@ -74,4 +74,49 @@ Promise.all([fetchData1, fetchData2, fetchData3])
       console.error('Error fetching data:', error);
   });
 
-  //7.
+  //7.waiting multiple timers?
+
+  const timer1 = new Promise(resolve =>setTimeout(resolve,1000,'Timer 1 finished'));
+  const timer2 = new Promise(resolve => setTimeout(resolve,2000,'Timer 2 finished'));
+  const timer3 = new Promise(resolve => setTimeout(resolve,3000,'Timer 3 finished'))
+  
+  Promise.all([timer1,timer2,timer3])
+  .then(message =>{
+    console.log(message);
+  });
+//8. api using then and catch methord
+
+// Using Fetch API to get data from a public API
+
+
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.error('There has been a problem with your fetch operation:', error);
+  });
+
+  //chaining promises using api
+
+  // Chaining multiple Promises
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+.then(response => response.json())
+.then(data => {
+  console.log('First fetch:', data);
+  return fetch('https://jsonplaceholder.typicode.com/todos/2');
+})
+.then(response => response.json())
+.then(data => {
+  console.log('Second fetch:', data);
+})
+.catch(error => {
+  console.error('Error:', error);
+});
+//
